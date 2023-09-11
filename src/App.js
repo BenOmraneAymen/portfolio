@@ -1,23 +1,26 @@
-import logo from './logo.svg';
-import './App.css';
+import About from "./components/About";
+import Skills from "./components/Skills";
+import Hero from "./components/Hero";
+import Navbar from "./components/navbar";
+import Project from "./components/Project";
+import Contact from "./components/Contact";
+import { useEffect } from "react";
+
 
 function App() {
+
+  useEffect(() => {
+    document.title = 'Portfolio';
+  }, []);
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div className="w-full overflow-x-hidden bg-neutral-50" >
+      <Navbar />
+      <Hero />
+      <About />
+      <Skills />
+      <Project />
+      <Contact />
     </div>
   );
 }
