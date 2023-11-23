@@ -1,4 +1,5 @@
 import BlogCard from "../components/BlogCard";
+import tsvsjs from "../assets/blog1/TsvsJs.webp";
 import { useEffect } from "react";
 
 export default function Blog() {
@@ -28,20 +29,23 @@ export default function Blog() {
           <BlogCard
             title="JavaScript vs TypeScript"
             descreption="A comparison between JavaScript and TypeScript. The pros and cons of each one and when to use each one."
-            image={"https://svitla.com/uploads_converted/2/13982-javascript_vs_typescript.webp?1664279370"}
+            image={tsvsjs}
             route={"/blog/1"}
+            available={true}
           />
           <BlogCard
             title="Tailwind CSS"
             descreption="An open-source utility-first CSS framework for rapid UI development."
             image="https://tailwindcss.com/_next/static/media/tailwindui-small@75.8bb955b2.jpg"
             route={"/blog/1"}
+            available={false}
           />
           <BlogCard
             title="React Native"
             descreption="A framework for building native apps using React and JavaScript."
             image={"https://miro.medium.com/v2/1*AjesIvV-kkwk6LLvNf1t4A.png"}
             route={"/blog/1"}
+            available={false}
           />
         </div>
       </div>

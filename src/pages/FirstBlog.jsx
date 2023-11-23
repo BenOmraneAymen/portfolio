@@ -17,7 +17,7 @@ export default function FirstBlog() {
         src={tsvsjs}
         alt=""
       />
-      <div className="w-1/2 flex flex-col items-start mt-4 mb-2">
+      <div className="w-full lg:w-1/2 flex flex-col items-start mt-4 mb-2">
         <h2 className="text-3xl font-medium mb-2">Content</h2>
         <ul>
           <li className="text-lg font-normal ml-2 mb-2">
@@ -34,7 +34,7 @@ export default function FirstBlog() {
           </li>
         </ul>
       </div>
-      <div className="w-1/2">
+      <div className="w-full lg:w-1/2">
         <h2 className="text-3xl font-medium my-2">Introduction</h2>
         <p className="">
           As most of you know, Javascript is a popular programming language
@@ -49,7 +49,7 @@ export default function FirstBlog() {
           in the last years.
         </p>
       </div>
-      <div className="w-1/2 flex flex-col items-start my-2">
+      <div className="w-full p-4 lg:p-0 lg:w-1/2 flex flex-col items-start my-2">
         <h2 className="text-3xl font-medium my-2">Similarties</h2>
         <p className="text-lg">
           JavaScript and TypeScript share many similarities due to TypeScript
