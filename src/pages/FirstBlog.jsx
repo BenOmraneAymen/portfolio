@@ -35,12 +35,6 @@ export default function FirstBlog() {
           </li>
         </ul>
       </div>
-      <div className="w-1/2" >
-      <Terminal>
-      <h2 className="text-lg text-emerald-300 font-medium font-mono">&gt;cd Workspace</h2>
-      <h2 className="text-lg text-emerald-300 font-medium font-mono">&gt;mkdir directory</h2>
-      </Terminal>
-      </div>
       <div className="w-full lg:w-1/2">
         <h2 className="text-3xl font-medium my-2">Introduction</h2>
         <p className="">
