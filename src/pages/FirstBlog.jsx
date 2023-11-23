@@ -7,6 +7,7 @@ import dataTypes from "../assets/blog1/dataTypes.png";
 import browser from "../assets/blog1/browser.jpg";
 import tsvsjs from "../assets/blog1/TsvsJs.webp";
 import ImageContainer from "../components/imageContainer";
+import Terminal from "../components/Terminal";
 
 export default function FirstBlog() {
   return (
@@ -33,6 +34,12 @@ export default function FirstBlog() {
             <a href="">⚫ Conclusion</a>
           </li>
         </ul>
+      </div>
+      <div className="w-1/2" >
+      <Terminal>
+      <h2 className="text-lg text-emerald-300 font-medium font-mono">&gt;cd Workspace</h2>
+      <h2 className="text-lg text-emerald-300 font-medium font-mono">&gt;mkdir directory</h2>
+      </Terminal>
       </div>
       <div className="w-full lg:w-1/2">
         <h2 className="text-3xl font-medium my-2">Introduction</h2>
@@ -107,7 +114,7 @@ export default function FirstBlog() {
           </p>
           <ImageContainer
             image={oop}
-            text="Diffrent oop terms in both languages"
+            text="Diffrent OOP terms in both languages"
           />
           <li className="text-2xl">
             <span className="font-medium text-2xl">5.</span>Dom manipulation:

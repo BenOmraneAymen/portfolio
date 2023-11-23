@@ -1,7 +1,8 @@
 import { motion, useAnimation, useInView } from "framer-motion";
 import { useEffect, useRef } from "react";
 
-export default function Reveal({ children }, delay) {
+export default function Reveal({ children, delay, hidden, visible, className }) {
+
   const ref = useRef(null);
 
   const inView = useInView(ref, { once: true });
@@ -11,22 +12,15 @@ export default function Reveal({ children }, delay) {
   useEffect(() => {
     if (inView) {
       mainControls.start("visible");
-      console.log("in view");
     }
   }, [inView]);
 
   return (
-    <div ref={ref} className="overflow-hidden">
+    <div ref={ref} className={"overflow-hidden "+ className}>
       <motion.div
         variants={{
-          hidden: {
-            opacity: 0,
-            y: 100,
-          },
-          visible: {
-            opacity: 1,
-            y: 0,
-          },
+          hidden: hidden || { opacity: 0, y: 100 },
+          visible: visible || { opacity: 1, y: 0 },
         }}
         initial="hidden"
         animate={mainControls}

@@ -30,7 +30,7 @@ export default function BlogCard({
                 </Reveal>
               </div>
               <Reveal>
-                <span className="text-xs sm:text-md lg:text-base font-light text-gray-500 py-4">
+                <span className="text-xs sm:text-sm lg:text-base text-center font-light text-gray-500 py-4">
                   {descreption}
                 </span>
               </Reveal>
