@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom";
 import DefaultDropdown from "./dropDown";
 import Reveal from "./Reveal";
 
@@ -28,6 +29,11 @@ export default function Navbar() {
         <Reveal>
           <span className="text-base lg:text-lg font-normal hover:text-primary hover:cursor-pointer">
             <a href="#Contact">Contact</a>
+          </span>
+        </Reveal>
+        <Reveal>
+          <span className="text-base lg:text-lg font-normal hover:text-primary hover:cursor-pointer">
+            <Link to={"/blog"} >Blog</Link>
           </span>
         </Reveal>
       </div>

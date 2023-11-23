@@ -1,4 +1,4 @@
-import portrait from "../assets/images/side_portrait.jpg";
+import portrait from "../assets/images/side_portrait.webp";
 import experience from "../assets/logos/experience.png";
 import education from "../assets/logos/education.png";
 import Reveal from "./Reveal";

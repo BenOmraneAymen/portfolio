@@ -1,26 +1,26 @@
-import About from "./components/About";
-import Skills from "./components/Skills";
-import Hero from "./components/Hero";
-import Navbar from "./components/navbar";
-import Project from "./components/Project";
-import Contact from "./components/Contact";
 import { useEffect } from "react";
+import MainPage from "./pages/MainPage";
+import Blog from "./pages/Blog";
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import FirstBlog from "./pages/FirstBlog";
+
 
 
 function App() {
 
-  useEffect(() => {
-    document.title = 'Portfolio';
-  }, []);
 
   return (
-    <div className="w-full overflow-x-hidden bg-neutral-50" >
-      <Navbar />
-      <Hero />
-      <About />
-      <Skills />
-      <Project />
-      <Contact />
+    <div>
+      <Router>
+        <Routes>
+          <Route path="/" element={<MainPage />} />
+          <Route path="/blog">
+            <Route path="" element={<Blog />}/>
+            <Route path="1" element={<FirstBlog/>} />
+          </Route>
+          <Route path="*" element={<h1>Not Found</h1>} />
+        </Routes>
+      </Router>
     </div>
   );
 }

@@ -2,7 +2,7 @@
 
 const plugins = require('tailwindcss/plugin')
 
-//rotate y utilites
+
 
 const rotateY = plugins(({ addUtilities }) => {
   addUtilities({

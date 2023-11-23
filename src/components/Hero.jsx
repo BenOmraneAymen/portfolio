@@ -1,4 +1,4 @@
-import portrait from "../assets/images/my_portrait.jpg";
+import portrait from "../assets/images/my_portrait.webp";
 import github from "../assets/logos/github.png";
 import linkedin from "../assets/logos/linkedin.png";
 import { DotGrid } from "./dotgrid/DotGrid";

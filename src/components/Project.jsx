@@ -1,9 +1,9 @@
 import ProjectCard from "./ProjectCard";
 import Reveal from "./Reveal";
-import movie from "../assets/images/projects/movie.png";
-import inventory from "../assets/images/projects/inventory.png";
-import blog from "../assets/images/projects/blog.png";
-import clediss from "../assets/images/projects/clediss.png";
+import movie from "../assets/images/projects/movie.webp";
+import inventory from "../assets/images/projects/inventory.webp";
+import blog from "../assets/images/projects/blog.webp";
+import clediss from "../assets/images/projects/clediss.webp";
 
 export default function Project() {
   return (
