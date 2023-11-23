@@ -51,7 +51,7 @@ export default function Blog() {
           />
         </div>
       </div>
-      <ToastContainer />
+      <ToastContainer limit={3}/>
     </div>
   );
 }

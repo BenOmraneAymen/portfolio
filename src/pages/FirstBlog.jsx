@@ -11,9 +11,9 @@ import ImageContainer from "../components/imageContainer";
 export default function FirstBlog() {
   return (
     <div className="w-screen h-screen flex flex-col items-center overflow-y-scroll p-4 bg-neutral-50">
-      <h1 className="text-5xl font-medium mb-10">Javascript vs Typescript</h1>
+      <h1 className="text-5xl text-center font-medium mb-10">Javascript vs Typescript</h1>
       <img
-        className="w-1/2"
+        className="w-full lg:w-1/2"
         src={tsvsjs}
         alt=""
       />
@@ -66,7 +66,7 @@ export default function FirstBlog() {
             developers who are familiar with either of them can quickly start
             writing code in the other.
           </p>
-          <div className="flex justify-between">
+          <div className="flex flex-col lg:flex-row justify-between  ">
             <ImageContainer image={jsSyntax} text="Javascript Syntax" />
             <ImageContainer image={tsSyntax} text="Typescript Syntax" />
           </div>
