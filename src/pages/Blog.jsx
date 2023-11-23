@@ -1,11 +1,13 @@
 import BlogCard from "../components/BlogCard";
 import tsvsjs from "../assets/blog1/TsvsJs.webp";
 import { useEffect } from "react";
+import { ToastContainer } from "react-toastify";
 
 export default function Blog() {
   useEffect(() => {
     document.title = "Blog";
   }, []);
+
 
   return (
     <div className="w-screen h-screen flex flex-col items-center overflow-y-scroll p-2 bg-neutral-50">
@@ -37,18 +39,19 @@ export default function Blog() {
             title="Tailwind CSS"
             descreption="An open-source utility-first CSS framework for rapid UI development."
             image="https://tailwindcss.com/_next/static/media/tailwindui-small@75.8bb955b2.jpg"
-            route={"/blog/1"}
+            route={null}
             available={false}
           />
           <BlogCard
             title="React Native"
             descreption="A framework for building native apps using React and JavaScript."
             image={"https://miro.medium.com/v2/1*AjesIvV-kkwk6LLvNf1t4A.png"}
-            route={"/blog/1"}
+            route={null}
             available={false}
           />
         </div>
       </div>
+      <ToastContainer />
     </div>
   );
 }

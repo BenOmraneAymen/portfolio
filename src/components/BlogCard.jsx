@@ -1,4 +1,5 @@
 import { Link } from "react-router-dom";
+import { toast } from "react-toastify";
 import Reveal from "./Reveal";
 
 export default function BlogCard({
@@ -8,11 +9,17 @@ export default function BlogCard({
   image,
   available,
 }) {
+
+  const notify = () =>{
+    if(!available){
+      toast.info("Coming Soon!!!");
+    }
+}
   return (
     <Reveal delay="0.125">
-      <div className={!available ? "opacity-50" : ""}>
+      <div className={!available ? "opacity-50" : ""} >
         <Link to={route}>
-          <div className={!available ?"w-80 h-64 lg:w-96 lg:h-80 m-4 flex flex-col items-center rounded-xl border-2 border-gray-400 hover:shadow-md hover:shadow-gray-400 transition-shadow duration-500 ease-in-out cursor-pointer" :"w-80 h-64 lg:w-96 lg:h-80 m-4 flex flex-col items-center rounded-xl border-2 border-gray-400 hover:shadow-md hover:shadow-gray-400 transition-shadow duration-500 ease-in-out"}>
+          <div className={!available ?"w-80 h-64 lg:w-96 lg:h-80 m-4 flex flex-col items-center rounded-xl border-2 border-gray-400 hover:shadow-md hover:shadow-gray-400 transition-shadow duration-500 ease-in-out cursor-pointer" :"w-80 h-64 lg:w-96 lg:h-80 m-4 flex flex-col items-center rounded-xl border-2 border-gray-400 hover:shadow-md hover:shadow-gray-400 transition-shadow duration-500 ease-in-out"} onClick={()=>notify()} >
             <Reveal>
               <img src={image} alt="" className="w-full rounded-t-lg " />
             </Reveal>
