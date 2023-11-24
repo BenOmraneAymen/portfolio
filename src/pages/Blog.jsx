@@ -28,7 +28,7 @@ export default function Blog() {
       </div>
       <div className="flex flex-col items-center">
         <h1 className="text-3xl font-medium my-10">Latest Posts</h1>
-        <div className="w-screen px-14 flex justify-around lg:justify-between flex-wrap">
+        <div className="w-screen p-0 lg:px-14 flex justify-around lg:justify-between flex-wrap">
           <BlogCard
             title="JavaScript vs TypeScript"
             descreption="A comparison between JavaScript and TypeScript. The pros and cons of each one and when to use each one."
