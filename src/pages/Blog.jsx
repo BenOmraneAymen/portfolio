@@ -1,5 +1,7 @@
 import BlogCard from "../components/BlogCard";
 import tsvsjs from "../assets/blog1/TsvsJs.webp";
+import tailwind from "../assets/blog2/tailwind.webp";
+import blog3 from "../assets/blog3/blog3.webp";
 import { useEffect } from "react";
 import { ToastContainer } from "react-toastify";
 
@@ -7,7 +9,6 @@ export default function Blog() {
   useEffect(() => {
     document.title = "Blog";
   }, []);
-
 
   return (
     <div className="w-screen h-screen flex flex-col items-center overflow-y-scroll p-2 bg-neutral-50">
@@ -27,7 +28,7 @@ export default function Blog() {
       </div>
       <div className="flex flex-col items-center">
         <h1 className="text-3xl font-medium my-10">Latest Posts</h1>
-        <div className="w-screen flex justify-around flex-wrap">
+        <div className="w-screen px-14 flex justify-around lg:justify-between flex-wrap">
           <BlogCard
             title="JavaScript vs TypeScript"
             descreption="A comparison between JavaScript and TypeScript. The pros and cons of each one and when to use each one."
@@ -36,9 +37,16 @@ export default function Blog() {
             available={true}
           />
           <BlogCard
-            title="Tailwind CSS"
+            title="Introduction Tailwind CSS"
             descreption="An open-source utility-first CSS framework for rapid UI development."
-            image="https://tailwindcss.com/_next/static/media/tailwindui-small@75.8bb955b2.jpg"
+            image={tailwind}
+            route={"/blog/2"}
+            available={true}
+          />
+          <BlogCard
+            title="Tailwind Tutorial"
+            descreption="A tutorial on how to use Tailwind CSS to build a simple website."
+            image={blog3}
             route={null}
             available={false}
           />
@@ -51,7 +59,7 @@ export default function Blog() {
           />
         </div>
       </div>
-      <ToastContainer limit={3}/>
+      <ToastContainer limit={3} />
     </div>
   );
 }

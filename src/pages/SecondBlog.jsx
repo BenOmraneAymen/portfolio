@@ -1,25 +1,32 @@
+import { useEffect } from "react";
+import tailwind from "../assets/blog2/tailwind.webp";
 import ImageContainer from "../components/imageContainer";
+import Terminal from "../components/Terminal";
+import learningCurve from "../assets/blog2/learning-curve.png";
+import { ToastContainer } from "react-toastify";
 
-export default function FirstBlog() {
+export default function SecondBlog() {
+  useEffect(() => {
+    document.title = "Tailwind Css";
+  }, []);
+
   return (
     <div className="w-screen h-screen flex flex-col items-center overflow-y-scroll p-4 bg-neutral-50">
-      <h1 className="text-5xl font-medium mb-10">Javascript vs Typescript</h1>
-      <img
-        className="w-1/2"
-        src="https://svitla.com/uploads_converted/2/13982-javascript_vs_typescript.webp?1664279370"
-        alt=""
-      />
+      <h1 className="text-5xl font-medium mb-10">
+        Introduction to Tailwind Css
+      </h1>
+      <img className="w-1/2" src={tailwind} alt="" />
       <div className="w-1/2 flex flex-col items-start mt-4 mb-2">
         <h2 className="text-3xl font-medium mb-2">Content</h2>
         <ul>
           <li className="text-lg font-normal ml-2 mb-2">
-            <a href="">⚫ Similarities</a>
+            <a href="">⚫ Benefits</a>
           </li>
           <li className="text-lg font-normal ml-2 mb-2">
-            <a href="">⚫ Diffrences</a>
+            <a href="">⚫ installation</a>
           </li>
           <li className="text-lg font-normal ml-2 mb-2">
-            <a href="">⚫ Why use Typescript over Javascript?</a>
+            <a href="">⚫ Tutorial</a>
           </li>
           <li className="text-lg font-normal ml-2 mb-2">
             <a href="">⚫ Conclusion</a>
@@ -29,175 +36,191 @@ export default function FirstBlog() {
       <div className="w-1/2">
         <h2 className="text-3xl font-medium my-2">Introduction</h2>
         <p className="">
-          As most of you know, Javascript is a popular programming language
-          primarily used for web development. It is quite old being created in
-          1995. JavaScript is a client-side language, meaning that it runs in
-          the browser and is used to create interactive web pages. Meanwhile,
-          Typescript is a programming language backed by Microsoft and created
-          in 2012. It is considered the successor of Javascript by a significant
-          portion of the programming community after being considered one of the
-          fastest-growing languages last year. Like its predecessor, typescript
-          is mostly used in web development and has garnered a large following
-          in the last years.
+          Tailwind CSS is a popular utility-first CSS framework that allows you
+          to build custom designs without ever leaving your HTML. Some of you
+          might say <em>"Sounds like inline styles" </em> but it's not. It uses
+          utility classes to style your HTML elements. Unlike other CSS
+          frameworks like Bootstrap, it is a highly customizable, low-level CSS
+          framework that gives you all of the building blocks you need to build
+          bespoke designs without any annoying opinionated styles you have to
+          fight to override.
         </p>
+        <h3 className="text-xl font-semibold">Note</h3>
+        <p>This site is built using Tailwind.</p>
       </div>
       <div className="w-1/2 flex flex-col items-start my-2">
-        <h2 className="text-3xl font-medium my-2">Similarties</h2>
+        <h2 className="text-3xl font-medium my-2">Benefits</h2>
         <p className="text-lg">
-          JavaScript and TypeScript share many similarities due to TypeScript
-          being a superset of JavaScript.
+          Using Tailwind CSS may sound like a hassle, but it has many benefits
+          that make it highly worth it.
         </p>
         <ul>
           <li className="text-2xl">
-            <span className="font-medium text-2xl">1.</span>Syntax:
+            <span className="font-medium text-2xl">1.</span>Easy to learn:
           </li>
           <p className="text-lg mx-3 py-2 ">
-            This may be an obvious similarity given that typescript is basically
-            an extension of javascript. Both programming languages share a very
-            similar syntax aside from some minute differences. This means that
-            developers who are familiar with either of them can quickly start
-            writing code in the other.
-          </p>
-          <div className="flex justify-between">
-            <ImageContainer image={jsSyntax} text="Javascript Syntax" />
-            <ImageContainer image={tsSyntax} text="Typescript Syntax" />
-          </div>
-          <li className="text-2xl">
-            <span className="font-medium text-2xl">2.</span>Open-Source
-            Community:
-          </li>
-          <p className="text-lg mx-3 py-2 ">
-            Both languages have large and active open-source communities, which
-            create and maintain libraries and frameworks that make it easier to
-            build complex web applications.
+            This may not be obvious at first glance, but Tailwind CSS is easy to
+            learn. If you are familiar with CSS, you will find it easy to
+            understand and use Tailwind CSS. It is also easy to install and
+            configure. From my own experience, I was able to learn it on the go
+            while working on a project and after a few days, I was able to use
+            it without any problems.
           </p>
           <ImageContainer
-            image={ranking}
-            text="Stackoverflow Ranking of the most popular languages in 2023"
+            image={learningCurve}
+            text="Tailwind Learning curve"
           />
+          <div className="flex justify-between"></div>
           <li className="text-2xl">
-            <span className="font-medium text-2xl">3.</span>Browser
-            compatibility:
+            <span className="font-medium text-2xl">2.</span>Faster development:
           </li>
           <p className="text-lg mx-3 py-2 ">
-            Being two languages mainly used in web development, both TypeScript
-            and JavaScript are supported by all major web browsers.Typescript is
-            compiled to JavaScript, so it can run in any browser that supports
-            JavaScript.
+            Tailwind CSS allows you to build custom designs without ever leaving
+            your HTML. This means that you don't have to switch between your
+            HTML and CSS files to style your elements. This makes the
+            development process much faster. Tailwind also helps you avoid
+            writing custom CSS, which can be time-consuming. Tailwind save you a
+            lot of time and effort naming classes especially in big projects.
           </p>
-          <ImageContainer
-            image={browser}
-            text="Typescript is compatible with all major browsers"
-          />
+
           <li className="text-2xl">
-            <span className="font-medium text-2xl">4.</span>Object-Oriented
-            Programming:
+            <span className="font-medium text-2xl">3.</span>Highly customizable:
           </li>
           <p className="text-lg mx-3 py-2 ">
-            Both Javascript and Typescript support Object-Oriented
-            Programming(OOP) concepts such as classes, objects, and inheritance.
+            unlike other CSS frameworks like Bootstrap, Tailwind CSS is a highly
+            customizable framework. Developers can tailor the framework to match
+            their project's design requirements by configuring colors, spacing,
+            typography, and more.
           </p>
-          <ImageContainer
-            image={oop}
-            text="Diffrent oop terms in both languages"
-          />
+
           <li className="text-2xl">
-            <span className="font-medium text-2xl">5.</span>Dom manipulation:
+            <span className="font-medium text-2xl">4.</span>Responsive Made
+            easy:
           </li>
           <p className="text-lg mx-3 py-2 ">
-            Both languages can manipulate the Document Object Model(DOM) used to
-            create dynamic web pages.
+            Tailwind CSS makes it easy to create responsive designs. It provides
+            a set of utility classes that can be used to create responsive
+            designs. For example, you can use the class
+            <em>text-lg md:text-2xl</em> to set the font size to 2xl on medium
+            screens and larger screens while setting it to lg on small screens.
+            We will talk more about this in the tutorial section.
+          </p>
+
+          <li className="text-2xl">
+            <span className="font-medium text-2xl">5.</span>Better code
+            maintainability:
+          </li>
+          <p className="text-lg mx-3 py-2 ">
+            The utility-first approach can lead to more maintainable code. Since
+            styles are directly applied in the markup, it's often easier to
+            understand the relationship between styles and HTML elements, making
+            maintenance and updates more straightforward.
+          </p>
+          <li className="text-2xl">
+            <span className="font-medium text-2xl">5.</span>Lighter CSS File
+            Size:
+          </li>
+          <p className="text-lg mx-3 py-2 ">
+            Tailwind is designed to be as modular as possible. When configured
+            properly and used in conjunction with build tools, it can eliminate
+            unused styles from the final production CSS, resulting in a smaller
+            file size and improved page load performance.
           </p>
         </ul>
-        <h2 className="text-3xl font-medium my-2">Diffrences</h2>
+        <h2 className="text-3xl font-medium my-2">Installation</h2>
         <p className="text-lg">
-          JavaScript and TypeScript may share many similarities, but there are
-          some differences between the two.
+          Now we get to the fun part. In this section, we will learn how to
+          install and configure Tailwind CSS. Like i already mentioned, it is
+          easy to install and configure. we will be using npm to install
+          Tailwind CSS. If you don't have npm installed, you can install it from
+          <a
+            href="https://nodejs.org/en/"
+            target="_blank"
+            className="font-semibold"
+          >
+            here
+          </a>
+          .
         </p>
-        <ul>
-          <li className="text-2xl">
-            <span className="font-medium text-2xl">1.</span>Type system:
-          </li>
-          <p className="text-lg mx-3 py-2 ">
-            Javascript, as most know, is a dynamically-typed language. this
-            means that the type of a variable is determined at runtime. On the
-            Flipside, typescript is statically-typed which means variable types
-            are known at compile time.
-          </p>
-          <div className="flex justify-between">
-            <ImageContainer
-              image={dataTypes}
-              text="Diffrent data types in Typescript"
-            />
-          </div>
-          <li className="text-2xl">
-            <span className="font-medium text-2xl">2.</span>Compilation:
-          </li>
-          <p className="text-lg mx-3 py-2 ">
-            Typescript is compiled to Javascript before it can be run while
-            JavaScript does not require compilation and is interpreted directly
-            by the browser. This makes Javascript much faster.
-          </p>
-          <ImageContainer
-            image={compatibility}
-            text="Typescript and Javascript execution process"
-          />
-        </ul>
-        <h2 className="text-3xl font-medium my-2">
-          Why use Typescript over Javascript?
-        </h2>
-        <p className="text-lg">
-          After having a look at the similarities and differences, you can
-          conclude that both Javascript and Typescript have a lot in common.
-          This begs the question: Why learn Typescript? The short answer is
-          typescript, despite its steep learning curve, helps developers write
-          better code. Let’s dig a little deeper.
+        <p className="text-lg my-2">
+          <span className="text-xl font-semibold">1.</span> First of all we need
+          to install Tailwind CSS and its dependencies.
+          <br />
+          Enter your project folder and open your terminal and run the following
+          command:
         </p>
-        <ul>
-          <li className="text-lg py-3">
-            <span className="font-medium text-2xl px-2">1.</span>The type system
-            implemented in Typescript helps programmers catch multiple errors in
-            development that might cause problems during runtime. This feature
-            is called type safety.
-          </li>
-          <li className="text-lg py-3">
-            <span className="font-medium text-2xl px-2">2.</span>Being a
-            statically-typed language, Typescript code tends to be
-            self-documenting and easier to understand as variable types provide
-            some needed clarity and more information about the code. This may
-            come in handy when working in teams where developers are expected to
-            read each other code.
-          </li>
-          <li className="text-lg py-3">
-            <span className="font-medium text-2xl px-2">3.</span>Typescript offers
-            better scalability than Javascript, which makes it the go-to when
-            working on large projects. This advantage is due to Typescript
-            implementing some features such as interfaces and generics.
-          </li>
-        </ul>
-        <h2 className="text-3xl font-medium my-2">
-          Should we replace Javascript with Typescript?
-        </h2>
-        <p className="text-lg">
-          With all these benefits and advantages, should we stop using
-          Javascript and switch to Typescript? The short answer is no.
-          Typescript does not replace JavaScript completely. In general,
-          Typescript provides a more robust and scalable option for large
-          projects where the potential for errors is high. Meanwhile, Javascript
-          embraces flexibility above all else, which makes it easier to develop
-          small to medium-sized projects without sticking to the same rules.
-          Javascript is also easier and faster to run.
+        <Terminal
+          title="Terminal"
+          commands={["> npm install tailwindcss", "> npx tailwindcss init"]}
+        />
+        <p className="text-lg my-2">
+          <span className="text-xl font-semibold">2.</span>Add the paths to all
+          of your template files in your tailwind.config.js file. For this
+          tutorial, we will be using the default paths. If you are using a
+          different folder structure, you will need to add the paths to your
+          files. For this tutorial also we will be using tailwind in html and js
+          files only. If you are using other file types, you will need to add
+          them to the content array.
         </p>
+        <Terminal
+          title="tailwind.config.js"
+          commands={[
+            "module.exports = {",
+            '  content: ["./src/**/*.{html,js}"]',
+            "theme: {",
+            "   extend: {},",
+            " },",
+            " plugins: [],",
+            "}",
+          ]}
+        />
+        <p className="text-lg my-2">
+          <span className="text-xl font-semibold">3.</span>Add the @tailwind
+          directives for each of Tailwind layers to your main CSS file.
+        </p>
+        <Terminal
+          title="style.css"
+          commands={[
+            "@tailwind base;",
+            "@tailwind components;",
+            "@tailwind utilities;",
+          ]}
+        />
+        <p className="text-lg my-2">
+          <span className="text-xl font-semibold">4.</span>Run the CLI tool to
+          scan your template files for classes and build your CSS.
+        </p>
+        <Terminal
+          title="Terminal"
+          commands={["> npx tailwindcss build style.css -o output.css"]}
+        />
+        <p className="text-lg my-2">
+          <span className="text-xl font-semibold">5.</span>Add your compiled CSS
+          file to the head tag and start using Tailwind's utility classes to
+          style your content.
+        </p>
+        <Terminal
+          title="index.html"
+          commands={[
+            "<head>",
+            '<link href="/dist/output.css" rel="stylesheet">',
+            "</head>",
+          ]}
+        />
+        <h3 className="text-lg">
+          <span className="text-xl font-semibold"> Congratulations</span>, now
+          you can use tailwind in your HTML file.
+        </h3>
         <h2 className="text-3xl font-medium my-2">Conclusion</h2>
         <p className="text-lg">
-          In this article, we took a look at both Javascript and Typescript,
-          their similarities and differences. We also learned that Typescript is
-          basically an extension of Javascript. It was developed for large
-          projects that transplied to Javascript. We also reviewed that
-          Javascript is still the way to go when developing small and medium
-          applications.
+          In this article, we took a look at Tailwind CSS and its benefits. We
+          also learned how to install and configure Tailwind CSS. I hope you
+          found this article useful.Soon, i will add a detailed tailwind
+          tutorial so stay tuned. If you have any questions or suggestions, feel
+          free to contact me.
         </p>
       </div>
+      <ToastContainer limit={3} />
     </div>
   );
 }

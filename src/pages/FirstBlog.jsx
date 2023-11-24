@@ -8,8 +8,14 @@ import browser from "../assets/blog1/browser.jpg";
 import tsvsjs from "../assets/blog1/TsvsJs.webp";
 import ImageContainer from "../components/imageContainer";
 import Terminal from "../components/Terminal";
+import { useEffect } from "react";
 
 export default function FirstBlog() {
+
+  useEffect(() => {
+    document.title = "Javascript vs Typescript";
+  }, []);
+
   return (
     <div className="w-screen h-screen flex flex-col items-center overflow-y-scroll p-4 bg-neutral-50">
       <h1 className="text-5xl text-center font-medium mb-10">Javascript vs Typescript</h1>
