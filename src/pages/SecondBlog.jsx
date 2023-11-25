@@ -16,7 +16,7 @@ export default function SecondBlog() {
         Introduction to Tailwind Css
       </h1>
       <img className="w-full lg:w-1/2" src={tailwind} alt="" />
-      <div className="w-1/2 flex flex-col items-start mt-4 mb-2">
+      <div className="w-full flex flex-col items-start mt-4 mb-2">
         <h2 className="text-3xl font-medium mb-2">Content</h2>
         <ul>
           <li className="text-lg font-normal ml-2 mb-2">
@@ -48,7 +48,7 @@ export default function SecondBlog() {
         <h3 className="text-xl font-semibold">Note</h3>
         <p>This site is built using Tailwind.</p>
       </div>
-      <div className="w-1/2 flex flex-col items-start my-2">
+      <div className="w-full lg:w-1/2 flex flex-col items-start my-2">
         <h2 className="text-3xl font-medium my-2">Benefits</h2>
         <p className="text-lg">
           Using Tailwind CSS may sound like a hassle, but it has many benefits
