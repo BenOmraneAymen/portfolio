@@ -15,7 +15,7 @@ export default function SecondBlog() {
       <h1 className="text-5xl font-medium mb-10">
         Introduction to Tailwind Css
       </h1>
-      <img className="w-1/2" src={tailwind} alt="" />
+      <img className="w-full lg:w-1/2" src={tailwind} alt="" />
       <div className="w-1/2 flex flex-col items-start mt-4 mb-2">
         <h2 className="text-3xl font-medium mb-2">Content</h2>
         <ul>
@@ -33,7 +33,7 @@ export default function SecondBlog() {
           </li>
         </ul>
       </div>
-      <div className="w-1/2">
+      <div className="w-full lg:w-1/2">
         <h2 className="text-3xl font-medium my-2">Introduction</h2>
         <p className="">
           Tailwind CSS is a popular utility-first CSS framework that allows you
