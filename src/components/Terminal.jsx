@@ -27,9 +27,9 @@ export default function Terminal({ title, commands }) {
           copy
         </div>
       </div>
-      <div className="flex flex-col gap-1 p-3">
+      <div className="flex flex-col gap-3 p-3">
         {commands.map((command) => {
-          return <h1 className="text-slate-300">{command}</h1>;
+          return <h1 className="text-slate-300">--&gt; {command}</h1>;
         })}
       </div>
     </div>

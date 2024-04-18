@@ -1,7 +1,7 @@
 import BlogCard from "../components/BlogCard";
 import tsvsjs from "../assets/blog1/TsvsJs.webp";
 import tailwind from "../assets/blog2/tailwind.webp";
-import blog3 from "../assets/blog3/blog3.webp";
+import blog3 from "../assets/blog3/landingImage.webp";
 import { useEffect } from "react";
 import { ToastContainer } from "react-toastify";
 
@@ -44,19 +44,19 @@ export default function Blog() {
             available={true}
           />
           <BlogCard
+          title="Introduction to Docker"
+          descreption="An introduction to Docker and how to use it to containerize your applications."
+          image={blog3}
+          route={"/blog/3"}
+          available={true}
+        />
+          {/* <BlogCard
             title="Tailwind Tutorial"
             descreption="A tutorial on how to use Tailwind CSS to build a simple website."
             image={blog3}
             route={null}
             available={false}
-          />
-          <BlogCard
-            title="React Native"
-            descreption="A framework for building native apps using React and JavaScript."
-            image={"https://miro.medium.com/v2/1*AjesIvV-kkwk6LLvNf1t4A.png"}
-            route={null}
-            available={false}
-          />
+          /> */}
         </div>
       </div>
       <ToastContainer limit={3} />

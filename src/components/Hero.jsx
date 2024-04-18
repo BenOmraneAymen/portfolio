@@ -8,7 +8,7 @@ import resume from "../assets/resume.pdf";
 
 export default function Hero() {
   return (
-    <div className="w-screen">
+    <div className="w-screen h-screen">
       <div
         className="z-10 flex flex-col md:flex-row w-full overflow-x-hidden py-16 lg:py-36 items-center justify-center"
         id="Hero"
@@ -85,7 +85,7 @@ export default function Hero() {
           </Reveal>
         </div>
       </div>
-      <DotGrid />
+      <DotGrid className="hidden lg:block" />
     </div>
   );
 }

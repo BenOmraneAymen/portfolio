@@ -1,10 +1,10 @@
 import oop from "../assets/blog1/oop.avif";
-import ranking from "../assets/blog1/ranking.png";
+import ranking from "../assets/blog1/ranking.webp";
 import compatibility from "../assets/blog1/compatibility.svg";
-import jsSyntax from "../assets/blog1/jsSyntax.png";
-import tsSyntax from "../assets/blog1/tsSyntax.png";
-import dataTypes from "../assets/blog1/dataTypes.png";
-import browser from "../assets/blog1/browser.jpg";
+import jsSyntax from "../assets/blog1/jsSyntax.webp";
+import tsSyntax from "../assets/blog1/tsSyntax.webp";
+import dataTypes from "../assets/blog1/dataTypes.webp";
+import browser from "../assets/blog1/browser.webp";
 import tsvsjs from "../assets/blog1/TsvsJs.webp";
 import ImageContainer from "../components/imageContainer";
 import Terminal from "../components/Terminal";
@@ -20,11 +20,11 @@ export default function FirstBlog() {
     <div className="w-screen h-screen flex flex-col items-center overflow-y-scroll p-4 bg-neutral-50">
       <h1 className="text-5xl text-center font-medium mb-10">Javascript vs Typescript</h1>
       <img
-        className="w-full lg:w-1/2"
+        className="w-full lg:w-2/3 2xl:w-1/2"
         src={tsvsjs}
         alt=""
       />
-      <div className="w-full lg:w-1/2 flex flex-col items-start mt-4 mb-2">
+      <div className="w-full lg:w-2/3 2xl:w-1/2 flex flex-col items-start mt-4 mb-2">
         <h2 className="text-3xl font-medium mb-2">Content</h2>
         <ul>
           <li className="text-lg font-normal ml-2 mb-2">
@@ -41,7 +41,7 @@ export default function FirstBlog() {
           </li>
         </ul>
       </div>
-      <div className="w-full lg:w-1/2">
+      <div className="w-full lg:w-2/3 2xl:w-1/2">
         <h2 className="text-3xl font-medium my-2">Introduction</h2>
         <p className="">
           As most of you know, Javascript is a popular programming language
@@ -56,7 +56,7 @@ export default function FirstBlog() {
           in the last years.
         </p>
       </div>
-      <div className="w-full p-4 lg:p-0 lg:w-1/2 flex flex-col items-start my-2">
+      <div className="w-full p-4 lg:p-0 lg:w-2/3 2xl:w-1/2 flex flex-col items-start my-2">
         <h2 className="text-3xl font-medium my-2">Similarties</h2>
         <p className="text-lg">
           JavaScript and TypeScript share many similarities due to TypeScript
